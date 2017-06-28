@@ -1,2 +1,5 @@
 # RIU_docs
-Internal documentation of the Research Informatics Unit. Good practices, manuals, trainings, and many others are included in this repository.
+
+This repository contains internal documentation of the Research Informatics Unit. Good practices, manuals, trainings, among other useful information are included in this repository.
+
+
