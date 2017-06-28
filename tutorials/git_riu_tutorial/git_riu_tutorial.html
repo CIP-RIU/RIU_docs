@@ -119,8 +119,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="git-tutorial-for-maintenance-of-riu-repositories." class="section level1">
-<h1>Git tutorial for maintenance of RIU repositories.</h1>
+<div id="riu-repository-maintenance" class="section level1">
+<h1>RIU Repository Maintenance</h1>
 <div id="introduction" class="section level2">
 <h2>1 Introduction</h2>
 <p>This tutorial provides an easy introduction to use <strong>Git</strong> and <strong>GitHub</strong> for repository maintenance. For this reason, to follow this guide you should have Git software installed in your machine and a GitHub account. In case of not having them, you can see the links below:</p>
@@ -131,15 +131,17 @@ $(document).ready(function () {
 </div>
 <div id="fork-repositories-from-github" class="section level2">
 <h2>2 Fork repositories from GitHub</h2>
-<p>One of the basic steps is <em>fork</em> packages. Our collaborators from other units at CIP commonly use packages together with Github to work with riu projects. A <em>Fork</em> is a copy of a particular repository. When you <em>fork</em> a package you preserve the original one and make changes in your copy.</p>
+<p>One of the basic steps is <strong>fork</strong> repositories. Our collaborators from other units at CIP commonly use packages together with Github to work with riu projects. A <em>Fork</em> is a copy of a particular repository. When you <em>fork</em> a package you preserve the original one and make changes in your own.</p>
 <p>For this purpose, we need</p>
 <ul>
 <li><p>Go to a particular repository that you want to copy. For example st4gi repository of Raul Eyzaguirre: <a href="https://github.com/reyzaguirre/st4gi" class="uri">https://github.com/reyzaguirre/st4gi</a></p></li>
 <li><p>Click on the <em>fork</em> button which appear in the right corner.</p></li>
 <li><p>Finally, you have a copy of the original repository: <a href="https://github.com/CIP-RIU/st4gi" class="uri">https://github.com/CIP-RIU/st4gi</a></p></li>
 </ul>
-<!-- ![Fig. 1.1](img/fork.png) -->
 </div>
+</div>
+<div id="fig.-1.1" class="section level1">
+<h1><a href="img/fork.png">Fig. 1.1</a></h1>
 <div id="update-your-fork-repostiroy" class="section level2">
 <h2>3 Update your fork repostiroy</h2>
 <p>Frequently, to work with the lastest commits from the original repository, we should be updating our <em>forks</em>. For this reason, we are going to give some useful git commands to trace and update new changes.</p>
@@ -147,40 +149,58 @@ $(document).ready(function () {
 <div id="remote" class="section level3">
 <h3>3.1 Remote</h3>
 <ul>
-<li>First, check where is your git repository. Open git (bash) and then type:</li>
+<li>Remotes check where is your git repository. Open git (bash) and then type:</li>
 </ul>
 <pre><code>$ git remote -v</code></pre>
-<!-- ![Caption for the picture.](img/git_remote_v.jpg) -->
 </div>
+</div>
+</div>
+<div id="caption-for-the-picture." class="section level1">
+<h1><a href="img/git_remote_v.jpg">Caption for the picture.</a></h1>
 <div id="upstream" class="section level3">
 <h3>3.2 Upstream</h3>
 <ul>
 <li>Secondly, we need the original (origin) repository, so we look for, in this case is <a href="https://github.com/reyzaguirre/st4gi" class="uri">https://github.com/reyzaguirre/st4gi</a>. Then go to <em>clone or download</em> and then click on the clipboard to copy the https link.</li>
 </ul>
-<!-- ![Fig. 1.3](img/git_repo_httpslink.jpg) -->
+</div>
+</div>
+<div id="fig.-1.3" class="section level1">
+<h1><a href="img/git_repo_httpslink.jpg">Fig. 1.3</a></h1>
 <p>The https links is <a href="https://github.com/reyzaguirre/st4gi.git" class="uri">https://github.com/reyzaguirre/st4gi.git</a>. Now go to git console and type:</p>
 <pre><code>$ git remote add upstream https://github.com/reyzaguirre/st4gi.git
 $ git remote -v</code></pre>
 <p>What we basically do here is setting up the origin repository (our copy) and the <em>upstream</em> repository, which is the st4gi reyzaguire’s repository which has new features that we want to merge in our repository.</p>
-<!-- ![Fig. 1.4](img/git_remote_2.jpg) -->
 </div>
+<div id="fig.-1.4" class="section level1">
+<h1><a href="img/git_remote_2.jpg">Fig. 1.4</a></h1>
 <div id="fetch-and-merge" class="section level3">
 <h3>3.3 Fetch and Merge</h3>
 <p>To track all the modifcations that upstream repository (st4gi) has, we use the <em>fetch</em> command in git:</p>
 <pre><code>$ git fetch upstream</code></pre>
-<!-- ![Fig. 1.5](img/git_fetch.jpg) -->
+</div>
+</div>
+<div id="fig.-1.5" class="section level1">
+<h1><a href="img/git_fetch.jpg">Fig. 1.5</a></h1>
 <p>After tracking new changes from the upstream repository, now we <em>merge</em> all of them in our origin repository. In the git console type:</p>
 <pre><code>$ git merge upstream/master</code></pre>
-<!-- ![Fig. 1.6](img/git_merge.jpg) -->
 </div>
+<div id="fig.-1.6" class="section level1">
+<h1><a href="img/git_merge.jpg">Fig. 1.6</a></h1>
 <div id="push-to-github" class="section level3">
 <h3>3.4 Push to GitHub</h3>
-<p>Eventually to push your changes into GitHub, you need to type the following lines in git:</p>
-<pre><code>$ git push origin to master</code></pre>
+<p>Eventually, to push your changes into your GitHub account, you need to type the following lines in git:</p>
+<pre><code>$ git push origin master</code></pre>
 <p>Note: In case of asking for credentials, write them in the console.</p>
 <p>Thats all!. Now you can go to your GitHub repository and see the new additions.</p>
 </div>
+<div id="real-example-with-pepa-package" class="section level3">
+<h3>Real example with pepa package</h3>
 </div>
+</div>
+<div id="important-links" class="section level1">
+<h1>Important links</h1>
+<p>1.- <a href="http://www.dataschool.io/simple-guide-to-forks-in-github-and-git/" class="uri">http://www.dataschool.io/simple-guide-to-forks-in-github-and-git/</a></p>
+<p>2.- <a href="https://www.youtube.com/watch?v=-zvHQXnBO6c" class="uri">https://www.youtube.com/watch?v=-zvHQXnBO6c</a></p>
 </div>
 
 
